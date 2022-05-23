@@ -1,0 +1,12 @@
+{
+  "name": "sha256_browser",
+  "version": "0.1.0",
+  "files": [
+    "sha256_browser_bg.wasm",
+    "sha256_browser.js",
+    "sha256_browser.d.ts"
+  ],
+  "module": "sha256_browser.js",
+  "types": "sha256_browser.d.ts",
+  "sideEffects": false
+}
