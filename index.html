@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><meta charset="utf-8"><body>
+<script type="module">
+  import init, {sha256_hasher} from './pkg/sha256_browser.js';
+  init().then(() =>{
+    window.sha256_hasher = sha256_hasher;
+  });
+</script>
+<h1>sha256 hasher</h1>
+<div>
+  入力:<br>
+  <textarea id="inbox" rows=8 cols=60></textarea><br>
+  <button onclick="hasher_click()">SHA256</button>
+  出力:<br>
+  <textarea id="outbox" rows=8 cols=60></textarea>
+</div>
+<script>
+  const q = (query) => {
+    return document.querySelector(query);
+  };
+
+  function hasher_click() {
+    console.log(q("#inbox"));
+    q("#outbox").value = window.sha256_hasher(q("#inbox").value);
+  }
+</script>
+
+</body>
+</html>
